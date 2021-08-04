@@ -1,0 +1,28 @@
+struct Book {
+      string title;
+      string author;
+      string genre;
+      long publicationYear;
+      double price;
+};
+
+
+    typedef sequence<Book> Books;
+    typedef sequence<string> bookTitlesList;
+
+interface Bookstore {
+
+
+    attribute Books bookList;
+    attribute bookTitlesList bookTitlesList;
+    attribute double sum;
+    attribute double discount;
+
+
+    void discountPrices();
+    void sumPrices();
+    void listTitlesFromGenre(in string genre);
+
+
+
+};

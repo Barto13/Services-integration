@@ -1,0 +1,10 @@
+interface Arytmetyka {
+    attribute double s1, s2, wynik;
+
+    exception DzieleniePrzezZero { };
+
+    void suma();
+    void roznica();
+    void iloczyn();
+    void iloraz() raises(DzieleniePrzezZero);
+};

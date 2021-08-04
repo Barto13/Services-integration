@@ -1,0 +1,412 @@
+{
+	"info": {
+		"_postman_id": "093f25d8-ee47-415f-8bae-c446506582fa",
+		"name": "SRI07-REST-s23432",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Bookstore",
+			"item": [
+				{
+					"name": "Get bookstores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{bookstore_url}}",
+							"host": [
+								"{{bookstore_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get bookstore details by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{bookstore_url}}/1",
+							"host": [
+								"{{bookstore_url}}"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get book by bookstore Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{bookstore_url}}/1/books",
+							"host": [
+								"{{bookstore_url}}"
+							],
+							"path": [
+								"1",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveNewBookstore",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"name\": \"TestName\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{bookstore_url}}",
+							"host": [
+								"{{bookstore_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateBookstore",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"name\": \"aaa\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8090/api/bookstores/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"bookstores",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteBookstore",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{bookstore_url}}/6",
+							"host": [
+								"{{bookstore_url}}"
+							],
+							"path": [
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addBook to Bookstore",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"name\": \"BookstoreGold\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{bookstore_url}}/2/7",
+							"host": [
+								"{{bookstore_url}}"
+							],
+							"path": [
+								"2",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "saveNewBook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n  \"title\": \"TestName2\",\r\n  \"genre\": \"TestDesc2\",\r\n  \"author\": \"TestDesc2\",\r\n  \"publicationYear\": \"2012\",\r\n  \"price\": \"20.00\"\r\n  }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8090/api/books",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBooks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8090/api/books",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBookById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8090/api/books/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"books",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateBook",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n  \"title\": \"UpdatedName2\",\r\n  \"genre\": \"UpdatedDesc2\",\r\n  \"author\": \"UpdatedDesc2\",\r\n  \"publicationYear\": \"2013\",\r\n  \"price\": \"10.00\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8090/api/books/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"books",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteBook",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8090/api/books/7",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"books",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get book details by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8090/api/books/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"books",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get bookstore by book id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8090/api/5/bookstores",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"5",
+								"bookstores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addBookstore to Book",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n  \"title\": \"TestName2\",\r\n  \"genre\": \"TestDesc2\",\r\n  \"author\": \"TestDesc2\",\r\n  \"publicationYear\": \"2012\",\r\n  \"price\": \"20.00\"\r\n  }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8090/api/books/8/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"books",
+								"8",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ValidationTests",
+			"item": [
+				{
+					"name": "saveNewBookstore",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{bookstore_url}}",
+							"host": [
+								"{{bookstore_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveNewBook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n  \"genre\": \"TestDesc2\"\r\n  }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8090/api/books",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "bookstore_url",
+			"value": "localhost:8090/api/bookstores"
+		}
+	]
+}
